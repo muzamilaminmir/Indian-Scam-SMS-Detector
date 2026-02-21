@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Scam SMS & Call Detector</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="logo-icon">🛡️</div>
+            <h1>Scam<span class="highlight">Shield</span> India</h1>
+            <p class="subtitle">AI-powered detection for SMS, WhatsApp & Call transcripts.</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="messageInput">Enter suspicious message:</label>
+                <div class="textarea-wrapper">
+                    <textarea id="messageInput" rows="5"
+                        placeholder="e.g., URGENT: SBI KYC suspended. Share OTP immediately or face legal action..."></textarea>
+                    <div class="focus-border"></div>
+                </div>
+            </div>
+
+            <button id="analyzeBtn" class="btn-primary">
+                <span class="btn-text">Analyze Risk Level</span>
+                <span class="btn-loader hidden"></span>
+            </button>
+
+            <div id="resultCard" class="result-card glass-panel hidden">
+                <div class="verdict-header">
+                    <div class="icon-ring">
+                        <span id="verdictIcon">✅</span>
+                    </div>
+                    <div>
+                        <h2 id="riskLevel">Safe</h2>
+                        <div class="confidence-bar-bg">
+                            <div id="confidenceBar" class="confidence-bar-fill"></div>
+                        </div>
+                        <p class="confidence-text">AI Confidence: <span id="confidenceValue">0%</span></p>
+                    </div>
+                </div>
+
+                <div class="reasons-box">
+                    <h3>Detection Signals</h3>
+                    <ul id="reasonsList"></ul>
+                </div>
+
+                <div class="safe-signal-box hidden">
+                    <h3>Safe Indicators</h3>
+                    <div id="safeSignals" class="tags-container safe-tags"></div>
+                </div>
+
+                <div class="highlight-box hidden">
+                    <h3>Red Flag Keywords</h3>
+                    <div id="highlightedWords" class="tags-container"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by ScamShield AI Engine v2.0</p>
+            <p style="margin-top: 10px; font-weight: 600; color: var(--text-secondary);">
+                Made by <a href="https://github.com/muzamilaminmir" target="_blank"
+                    style="color: var(--primary-color); text-decoration: none; font-weight: 700; transition: color 0.2s;">Muzamil
+                    Mir</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
