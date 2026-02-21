@@ -2,7 +2,7 @@
 
 A robust, AI-powered MVP web application designed to detect and flag fraudulent SMS and call transcripts specifically tailored to the Indian context.
 
-![ScamShield UI](frontend/ui_preview.png) *(Note: Replace with actual screenshot)*
+
 
 ## Features
 
